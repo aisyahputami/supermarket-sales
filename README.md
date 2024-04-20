@@ -3,4 +3,11 @@ Our analytics team needs data related to our Supermarket sales for our monthly r
 
 Business team also needs me to generate any insights we can get from those data. I’ll collaborate with a data visualization expert that will create a dashboard for the business team. I need to provide summary tables for data visualization experts, such as monthly revenue, etc.
 
+The tools used to build the data pipeline are as follows:
+
+1. **Kafka** as a streaming platform
+2. **NiFi** as an ETL (Extract, Transform, Load) tool
+3. **Informatica** as a data integration tool
+4. **Google Cloud Storage** as a datalake
+5. **Google BigQuery** as a data warehouse
 

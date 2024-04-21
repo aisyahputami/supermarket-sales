@@ -94,9 +94,11 @@ Next, we can create a PutGCSObject processor. This processor is used to upload d
 
 And then, configure the settings for the PutGCSObject processor in the "Connection" and "Properties" sections as follows
 
-![GCS Connection from](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-connection-from.png)
+![GCS Connection from](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-connection-from-gcs1.png)
 
-![GCS Connection to](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-connection-to.png)
+![GCS Connection from2](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-connection-from-gcs2.png)
+
+![GCS Connection to](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-connection-from.png)
 
 ![GCS Relationships](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-properties.png)
 
@@ -119,7 +121,46 @@ Next, configure the settings for the ConsumerKafka processor in the "Connection"
 ![NiFi Relationships LogAttribute](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-logattribute-relationship.png)
 
 
+### ConvertRecord
+Create ConvertRecord processor. This processor is used to transform the format or structure of incoming data records into a different format or structure. In this case, we can utilize it to convert data from JSON format to CSV format.
 
+![NiFi ConvertRecord](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/create-convert-record.png)
 
+And then, configure the settings for the ConvertRecord processor in the "Connection" and "Properties" sections as follows
 
+![Connection to ConvertRecord](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/put-gcs-to-convertrecord.png)
+
+![Connection from ConvertRecord 1](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/convertrecord-to-bq.png)
+
+![Connection from ConvertRecord 2](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/convertrecord-to-logattribute.png)
+
+![Properties ConvertRecord](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/convertrecord-to-logattribute.png)
+
+We also need to configure the NiFi Flow Configuration in the Controller Service section as follows
+![Convertrecord-Enable](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/enable-controller-service-convertrecord.png)
+
+### PutBigQuery
+
+Before creating the PutBigQuery processor, we need to prepare the dataset (named 'supermarket') and table (named 'sales') in BigQuery.
+
+![Create Dataset](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/create-dataset-in-bq.png)
+
+![Create Table 1](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/create-table-1.png)
+
+![Create Table 2](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/create-table-2.png)
+
+![Create Table 3](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/create-table-3.png)
+
+Create PutBigQuery processor. This processor is use to ingest data from Apache NiFi into Google BigQuery.
+![NiFi PutBigQuery](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/create-put-big-query.png)
+
+And then, configure the settings for the PutBigQuery processor in the "Connection" and "Properties" sections as follows
+![Connection to PutBigQuery](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-from-put-bq-to.png)
+
+![Connection from PutBigQuery]()
+
+![Properties PutBigQuery](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-bigquery-properties.png)
+
+We also need to configure the NiFi Flow Configuration in the Controller Service section as follows
+![Enable PutBigQuery](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/enable-put-bigquery.png)
 

@@ -30,7 +30,7 @@ Data ingestion is crucial as it is a critical step in preparing data for further
 For this case, a combination of Apache NiFi and Apache Kafka is used to integrate data from a CSV source to Informatica as a data sink.
 
 ## Setup Apache Kafka
-Here's how to check the Java version. Make sure you have Java installed.
+Here's how to check the Java version. Make sure we have Java installed.
 ![Java version](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/java-version.png)
 
 Then install Kafka and check the list of files in the Kafka directory.
@@ -45,7 +45,7 @@ Open another new terminal, and start Kafka.
 
 Return to the first terminal and create a topic named 'supermarket'.
 ![Supermarket Topic](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/create-supermarket-topic.png)
-
+By running this command, we will create a new topic named "supermarket" with 3 partitions and a replication factor of 1 on the Kafka cluster running on localhost and port 9092.
 
 ## Extraction
 We will use Kafka Connect to load data from CSV files into Kafka with streaming capabilities. Kafka Connect has been designed to move data in and out of Kafka using connectors. Here, we have used **SpoolDirCsvSourceConnector** to source data from csv file. It is CSV Source Connector for Confluent Platform.

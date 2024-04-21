@@ -64,7 +64,7 @@ The home view of NiFi looks like this
 
 
 
-## Extraction
+## Data Ingestion and Streaming
 Create processor ConsumerKafka. This processor is used in Apache NiFi to retrieve data from Kafka topics.
 ![NiFi ConsumerKafka](https://github.com/aisyahputami/supermarket-sales/blob/main/extraction/consumer-kafka.png)
 

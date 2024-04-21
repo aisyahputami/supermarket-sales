@@ -83,7 +83,22 @@ After that, we also need to create a folder in the 'weekly_assignment_2' bucket.
 The folder is ready to use.
 ![Folder Ready](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/data-lake-ready.png)
 
+Next, we can create a PutGCSObject processor. This processor is used to upload data or files from FlowFiles to Google Cloud Storage (GCS).
+![NiFi GCS](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/put-gcs.png)
 
+And then, configure the settings for the PutGCSObject processor in the "Connection" and "Properties" sections as follows
+![GCS Connection from](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-connection-from.png)
+
+![GCS Connection to](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-connection-to.png)
+
+![GCS Relationships](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-properties.png)
+
+We also need to configure the NiFi Flow Configuration in the Controller Service section as follows
+![Controller Service-1](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-credentials-controller.png)
+
+![Controller Service-2](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-credentials-controller-2.png)
+
+![Controller Service-3](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-enable-controller.png)
 
 Create LogAttribute Processor. LogAttribute Processor serves as a valuable tool for monitoring, auditing, and troubleshooting data flows in Apache NiFi by providing visibility into the attributes of FlowFiles as they move through the system.
 

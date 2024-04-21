@@ -168,5 +168,22 @@ We also need to configure the NiFi Flow Configuration in the Controller Service 
 ![NiFi](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/NiFi%20pipeline.png)
 
 ### Extraction
-The process of extracting data from JSON using Kafka Producer
+The process of extracting data from JSON using Kafka Producer. The steps are as follows
+![kafka stream](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/kafka-stream/stream-json-by-kafka.png)
+
+In NiFi, there is a description that 1 data enters each processor and exits according to the flow.
+![nifi stream](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/kafka-stream/NiFi-streaming.png)
+
+To ensure that the data has been distributed correctly, perform the following checks in Google Cloud Storage and Google BigQuery
+![gcs](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/kafka-stream/file-in-gcs.png)
+
+![bq](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/kafka-stream/file-in-bq.png)
+
+Next, verify that the uploaded data matches its row count, which is 100 rows, using the following query
+![query](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/kafka-stream/query.png)
+
+Based on the output, the uploaded data indeed consists of 1000 rows.
+![1000](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/kafka-stream/result.png)
+
+##
 

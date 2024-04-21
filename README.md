@@ -28,3 +28,19 @@ The data ingestion process involves several steps, including:
 Data ingestion is crucial as it is a critical step in preparing data for further analysis, processing, or storage. This process ensures that the required data is available in the appropriate format and of good quality for use in various business applications and analyses.
 
 For this case, a combination of Apache NiFi and Apache Kafka is used to integrate data from a CSV source to Informatica as a data sink.
+
+## Setup Apache Kafka
+
+## Extraction
+
+Here's how to check the Java version. Make sure you have Java installed.
+
+
+We will use Kafka Connect to load data from CSV files into Kafka with streaming capabilities. Kafka Connect has been designed to move data in and out of Kafka using connectors. Here, we have used **SpoolDirCsvSourceConnector** to source data from csv file. It is CSV Source Connector for Confluent Platform.
+
+Spool Dir connector supports various flat file formats, including CSV. Get it from [Confluent Hub](https://www.confluent.io/hub/jcustenborder/kafka-connect-spooldir)
+
+I suggest you read usage of SpoolDirCsvSourceConnector in
+[CSV Source Connector for Confluent Platform](https://docs.confluent.io/kafka-connectors/spooldir/current/connectors/csv_source_connector.html)
+
+

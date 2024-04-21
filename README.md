@@ -69,6 +69,16 @@ Next, configure the settings for the ConsumerKafka processor in the "Relationshi
 
 ![Config ConsumerKafka](https://github.com/aisyahputami/supermarket-sales/blob/main/extraction/config-consumer-kafka-properties.png)
 
+Create LogAttribute Processor. LogAttribute Processor serves as a valuable tool for monitoring, auditing, and troubleshooting data flows in Apache NiFi by providing visibility into the attributes of FlowFiles as they move through the system.
+![NiFi LogAttribute](https://github.com/aisyahputami/supermarket-sales/blob/main/extraction/logattribute-processor.png)
+
+Next, configure the settings for the ConsumerKafka processor in the "Connection" and "Relationships" sections as follows
+![NiFi Connection LogAttribute](https://github.com/aisyahputami/supermarket-sales/blob/main/extraction/logattribute-processor.png)
+
+![NiFi Relationships LogAttribute](https://github.com/aisyahputami/supermarket-sales/blob/main/extraction/config-logattribute-relationship.png)
+
+
+
 
 
 

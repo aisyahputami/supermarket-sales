@@ -72,7 +72,18 @@ Next, configure the settings for the ConsumerKafka processor in the "Relationshi
 ![Config ConsumerKafka](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-consumer-kafka-properties.png)
 
 Then we will create a PutGCSObject processor. However, before that, let's prepare the Google Cloud Storage. First, create a bucket in GCS and name it 'weekly_assignment_2'.
-![Create Bucket](https://github.com/aisyahputami/supermarket-sales/blob/main/extraction/config-consumer-kafka-properties.png)
+![Create Bucket](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/create-bucket.png)
+
+The bucket is already created and ready to use.
+![Bucket Ready](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/create-bucket.png)
+
+After that, we also need to create a folder in the 'weekly_assignment_2' bucket. Name the folder 'data-lake'.
+![Create Folder](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/create-data-lake.png)
+
+The folder is ready to use.
+![Folder Ready](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/data-lake-ready.png)
+
+
 
 Create LogAttribute Processor. LogAttribute Processor serves as a valuable tool for monitoring, auditing, and troubleshooting data flows in Apache NiFi by providing visibility into the attributes of FlowFiles as they move through the system.
 

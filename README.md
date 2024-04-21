@@ -11,3 +11,5 @@ The tools used to build the data pipeline are as follows:
 4. **Google Cloud Storage** as a datalake
 5. **Google BigQuery** as a data warehouse
 
+
+Below is the pipeline I've built to integrate data from a CSV data source into BigQuery as a data warehouse:

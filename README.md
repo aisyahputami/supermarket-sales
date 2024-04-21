@@ -61,11 +61,14 @@ The home view of NiFi looks like this
 ![NiFi Home](https://github.com/aisyahputami/supermarket-sales/blob/main/nifi-setup/home-nifi.png)
 
 ## Extraction
-We will use Kafka Connect to load data from CSV files into Kafka with streaming capabilities. Kafka Connect has been designed to move data in and out of Kafka using connectors. Here, we have used **SpoolDirCsvSourceConnector** to source data from csv file. It is CSV Source Connector for Confluent Platform.
+Create processor ConsumerKafka. This processor is used in Apache NiFi to retrieve data from Kafka topics.
+![NiFi ConsumerKafka](https://github.com/aisyahputami/supermarket-sales/blob/main/extraction/consumer-kafka.png)
 
-Spool Dir connector supports various flat file formats, including CSV. Get it from [Confluent Hub](https://www.confluent.io/hub/jcustenborder/kafka-connect-spooldir)
+Next, configure the settings for the ConsumerKafka processor in the "Relationships" and "Properties" sections as follows
+![Config Relationship ConsumerKafka](https://github.com/aisyahputami/supermarket-sales/blob/main/extraction/config-consumer-kafka-relationship.png)
 
-I suggest you read usage of SpoolDirCsvSourceConnector in
-[CSV Source Connector for Confluent Platform](https://docs.confluent.io/kafka-connectors/spooldir/current/connectors/csv_source_connector.html)
+![Config ConsumerKafka](https://github.com/aisyahputami/supermarket-sales/blob/main/extraction/config-consumer-kafka-properties.png)
+
+
 
 

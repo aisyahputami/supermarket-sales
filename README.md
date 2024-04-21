@@ -13,4 +13,4 @@ The tools used to build the data pipeline are as follows:
 
 
 Below is the pipeline I've built to integrate data from a CSV data source into BigQuery as a data warehouse:
-![Pipeline](https://github.com/aisyahputami/supermarket-sales/blob/main/weekly_assignment-2%20(pipeline).png)
+![Pipeline](https://github.com/aisyahputami/supermarket-sales/blob/main/weekly_assignment-2-pipeline.png)

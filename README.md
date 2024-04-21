@@ -42,10 +42,17 @@ Open a new terminal, and start Zookeeper.
 Open another new terminal, and start Kafka.
 ![Start Kafka](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/start-kafka.png)
 
-
 Return to the first terminal and create a topic named 'supermarket'.
 ![Supermarket Topic](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/create-supermarket-topic.png)
 By running this command, we will create a new topic named 'supermarket' with 3 partitions and a replication factor of 1 on the Kafka cluster running on localhost and port 9092.
+![Describe Supermarket Topic](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/describe-topic-supermarket.png)
+
+To ensure that the 'supermarket' topic has been created, we can check the list of existing topics.
+![List Existing Topic](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/list-existing-topic.png)
+
+## Setup Apache NiFi
+
+
 
 ## Extraction
 We will use Kafka Connect to load data from CSV files into Kafka with streaming capabilities. Kafka Connect has been designed to move data in and out of Kafka using connectors. Here, we have used **SpoolDirCsvSourceConnector** to source data from csv file. It is CSV Source Connector for Confluent Platform.

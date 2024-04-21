@@ -111,7 +111,7 @@ Create LogAttribute Processor. LogAttribute Processor serves as a valuable tool 
 
 Next, configure the settings for the ConsumerKafka processor in the "Connection" and "Relationships" sections as follows
 
-xxxxxxconection-soon
+![NiFi Connection LogAttribute](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-logattribute-connection.png)
 
 ![NiFi Relationships LogAttribute](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-logattribute-relationship.png)
 

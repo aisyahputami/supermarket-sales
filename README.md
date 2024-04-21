@@ -60,6 +60,8 @@ Open https://localhost:8443 in your browser and login to NiFi using the username
 The home view of NiFi looks like this
 ![NiFi Home](https://github.com/aisyahputami/supermarket-sales/blob/main/nifi-setup/home-nifi.png)
 
+
+
 ## Extraction
 Create processor ConsumerKafka. This processor is used in Apache NiFi to retrieve data from Kafka topics.
 ![NiFi ConsumerKafka](https://github.com/aisyahputami/supermarket-sales/blob/main/extraction/consumer-kafka.png)

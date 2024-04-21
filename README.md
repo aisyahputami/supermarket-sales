@@ -31,6 +31,20 @@ For this case, a combination of Apache NiFi and Apache Kafka is used to integrat
 
 ## Setup Apache Kafka
 Here's how to check the Java version. Make sure you have Java installed.
+![Java version](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/java-version.png)
+
+Then install Kafka and check the list of files in the Kafka directory.
+![Kafka File Directory](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/kafka-file-directory.png)
+
+Open a new terminal, and start Zookeeper.
+![Start Zookeeper](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/start-zookeeper.png)
+
+Open another new terminal, and start Kafka.
+![Start Kafka](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/start-kafka.png)
+
+
+Return to the first terminal and create a topic named 'supermarket'.
+![Supermarket Topic](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/create-supermarket-topic.png)
 
 
 ## Extraction

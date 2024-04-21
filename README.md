@@ -51,8 +51,8 @@ To ensure that the 'supermarket' topic has been created, we can check the list o
 ![List Existing Topic](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/list-existing-topic.png)
 
 ## Setup Apache NiFi
-
-
+Open a new terminal and start NiFi. Ensure that we have installed NiFi beforehand.
+![Start Nifi](https://github.com/aisyahputami/supermarket-sales/blob/main/nifi-setup/start-nifi.png)
 
 ## Extraction
 We will use Kafka Connect to load data from CSV files into Kafka with streaming capabilities. Kafka Connect has been designed to move data in and out of Kafka using connectors. Here, we have used **SpoolDirCsvSourceConnector** to source data from csv file. It is CSV Source Connector for Confluent Platform.

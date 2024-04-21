@@ -15,6 +15,9 @@ The tools used to build the data pipeline are as follows:
 Below is the pipeline I've built to integrate data from a CSV data source into BigQuery as a data warehouse:
 ![Pipeline](https://github.com/aisyahputami/supermarket-sales/blob/main/weekly_assignment-2-pipeline.png)
 
+Before we proceed, given that the source is a CSV file, we'll first convert it into JSON format using Python to simplify the process. Below is the conversion process.
+![Convert CSV](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/convert-csv-to-json.png)
+
 # Data Ingestion
 Data ingestion is the process of retrieving, collecting, and inputting data from various sources into a specific system or data storage. It is the initial step in the data lifecycle where the required data for analysis, processing, or storage is gathered from diverse sources and fed into a centralized data environment.
 

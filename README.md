@@ -78,7 +78,7 @@ Then we will create a PutGCSObject processor. However, before that, let's prepar
 ![Create Bucket](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/create-bucket.png)
 
 The bucket is already created and ready to use.
-![Bucket Ready](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/create-bucket.png)
+![Bucket Ready](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/bucket-ready.png)
 
 After that, we also need to create a folder in the 'weekly_assignment_2' bucket. Name the folder 'data-lake'.
 ![Create Folder](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/create-data-lake.png)

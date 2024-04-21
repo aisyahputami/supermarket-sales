@@ -66,7 +66,8 @@ The home view of NiFi looks like this
 
 
 ## Data Ingestion and Streaming
-Create processor ConsumerKafka. This processor is used in Apache NiFi to retrieve data from Kafka topics.
+### ConsumerKafka
+Create ConsumerKafka processor. This processor is used in Apache NiFi to retrieve data from Kafka topics.
 ![NiFi ConsumerKafka](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/consumer-kafka.png)
 
 Next, configure the settings for the ConsumerKafka processor in the "Relationships" and "Properties" sections as follows
@@ -74,6 +75,7 @@ Next, configure the settings for the ConsumerKafka processor in the "Relationshi
 
 ![Config ConsumerKafka](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-consumer-kafka-properties.png)
 
+### PutGCSObject
 Then we will create a PutGCSObject processor. However, before that, let's prepare the Google Cloud Storage. First, create a bucket in GCS and name it 'weekly_assignment_2'.
 ![Create Bucket](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/create-bucket.png)
 
@@ -105,7 +107,8 @@ We also need to configure the NiFi Flow Configuration in the Controller Service 
 
 ![Controller Service-3](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-enable-controller.png)
 
-Create LogAttribute Processor. LogAttribute Processor serves as a valuable tool for monitoring, auditing, and troubleshooting data flows in Apache NiFi by providing visibility into the attributes of FlowFiles as they move through the system.
+### LogAttribute
+Create LogAttribute processor. LogAttribute processor serves as a valuable tool for monitoring, auditing, and troubleshooting data flows in Apache NiFi by providing visibility into the attributes of FlowFiles as they move through the system.
 
 ![NiFi LogAttribute](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/logattribute-processor.png)
 

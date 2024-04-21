@@ -185,5 +185,5 @@ Next, verify that the uploaded data matches its row count, which is 100 rows, us
 Based on the output, the uploaded data indeed consists of 1000 rows.
 ![1000](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/kafka-stream/result.png)
 
-##
+## Setup Informatica
 

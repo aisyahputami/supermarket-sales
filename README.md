@@ -164,3 +164,6 @@ And then, configure the settings for the PutBigQuery processor in the "Connectio
 We also need to configure the NiFi Flow Configuration in the Controller Service section as follows
 ![Enable PutBigQuery](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/enable-put-bigquery.png)
 
+### Overall NiFi pipeline
+![NiFi](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/NiFi%20pipeline.png)
+

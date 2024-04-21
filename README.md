@@ -167,3 +167,6 @@ We also need to configure the NiFi Flow Configuration in the Controller Service 
 ### Overall NiFi pipeline
 ![NiFi](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/NiFi%20pipeline.png)
 
+### Extraction
+The process of extracting data from JSON using Kafka Producer
+

@@ -87,9 +87,11 @@ The folder is ready to use.
 ![Folder Ready](https://github.com/aisyahputami/supermarket-sales/blob/main/gcs/data-lake-ready.png)
 
 Next, we can create a PutGCSObject processor. This processor is used to upload data or files from FlowFiles to Google Cloud Storage (GCS).
+
 ![NiFi GCS](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/put-gcs.png)
 
 And then, configure the settings for the PutGCSObject processor in the "Connection" and "Properties" sections as follows
+
 ![GCS Connection from](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-connection-from.png)
 
 ![GCS Connection to](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-gcs-connection-to.png)

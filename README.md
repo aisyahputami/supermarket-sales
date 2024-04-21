@@ -155,9 +155,9 @@ Create PutBigQuery processor. This processor is use to ingest data from Apache N
 ![NiFi PutBigQuery](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/create-put-big-query.png)
 
 And then, configure the settings for the PutBigQuery processor in the "Connection" and "Properties" sections as follows
-![Connection to PutBigQuery](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-from-put-bq-to.png)
+![Connection to PutBigQuery](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-to-bq.png)
 
-![Connection from PutBigQuery]()
+![Connection from PutBigQuery](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-from-put-bq-to.png)
 
 ![Properties PutBigQuery](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-put-bigquery-properties.png)
 

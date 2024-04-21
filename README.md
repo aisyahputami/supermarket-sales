@@ -45,7 +45,7 @@ Open another new terminal, and start Kafka.
 
 Return to the first terminal and create a topic named 'supermarket'.
 ![Supermarket Topic](https://github.com/aisyahputami/supermarket-sales/blob/main/kafka-setup/create-supermarket-topic.png)
-By running this command, we will create a new topic named "supermarket" with 3 partitions and a replication factor of 1 on the Kafka cluster running on localhost and port 9092.
+By running this command, we will create a new topic named 'supermarket' with 3 partitions and a replication factor of 1 on the Kafka cluster running on localhost and port 9092.
 
 ## Extraction
 We will use Kafka Connect to load data from CSV files into Kafka with streaming capabilities. Kafka Connect has been designed to move data in and out of Kafka using connectors. Here, we have used **SpoolDirCsvSourceConnector** to source data from csv file. It is CSV Source Connector for Confluent Platform.

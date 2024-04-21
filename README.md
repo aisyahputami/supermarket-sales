@@ -134,7 +134,7 @@ And then, configure the settings for the ConvertRecord processor in the "Connect
 
 ![Connection from ConvertRecord 2](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/convertrecord-to-logattribute.png)
 
-![Properties ConvertRecord](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/convertrecord-to-logattribute.png)
+![Properties ConvertRecord](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/config-ConvertRecord-properties.png)
 
 We also need to configure the NiFi Flow Configuration in the Controller Service section as follows
 ![Convertrecord-Enable](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/enable-controller-service-convertrecord.png)

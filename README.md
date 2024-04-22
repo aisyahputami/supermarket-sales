@@ -235,5 +235,5 @@ Lastly, perform validation before running. The results of the run will appear un
 
 ![my job](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/my-jobs.png)
 
-
-
+## The Aggregation Results in BigQuery
+![result](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/data-at-BigQuery.png)

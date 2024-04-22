@@ -186,54 +186,75 @@ Based on the output, the uploaded data indeed consists of 1000 rows.
 ![1000](https://github.com/aisyahputami/supermarket-sales/blob/main/ingestion-streaming/kafka-stream/result.png)
 
 ## Setup Informatica
-First, Mmke sure that we have an Informatica account and connect it with BigQuery in the connection section. Then, create a mapping named 'WeeklyAssignment' and add an aggregator in the mapp.
+First, make sure that we have an Informatica account and connect it with BigQuery in the connection section. Then, create a mapping named 'WeeklyAssignment' and add an expression and aggregator in the mapp.
 
-![create](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/add-agregator.png)
+![create](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/0.map.jpeg)
 
 ### Source
 In the Source, configure the connection that was previously created. Ensure that the table object matches the one connected by reviewing the Preview Data and Fields.
 
-![connection](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/source-connectiom.png)
+![connection](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/1.connection-source.jpeg)
 
-![preview](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/source-preview-data.png)
+![preview](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/1.preview-source.jpeg)
 
-![field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/source-field.png)
+![field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/1.field-source.jpeg)
+
+### Expression
+This time, we will use expressions to convert the data type of the Date column from string to Date type.
+
+![date](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/2.edit-field-expression.jpeg)
 
 ### Agregator
 In the Aggregator, specify which columns to aggregate in the Group By section. In this case, aggregation will be performed on the City and Gender columns.
 
-![group](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/group-by.png)
+![group](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/2.group-by-aggregate.jpeg)
 
 Next, create fields for the aggregated results. We will try aggregating using the SUM expression on the City and Gender columns. Also, specify the data type with its precision and scale specifications. Using precision 15 and scale 5, it means that we can store numbers with a total of 15 digits, where 5 of them can be used for decimal places.
 
-![setting](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/sett-agregate.png)
+![setting](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/2.edit-filed-aggregate.jpeg)
 
-![agregate](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/list-agregate.png)
+![agregate](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/2.aggregate.jpeg)
 
 ### Target
 In the Target, select the source columns to be aggregated and the columns for the aggregated results in the incoming field section.
 
-![incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-sett-field.png)
+![sett incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/3.config-field-rules-target.jpeg)
 
-![sett incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-field.png)
+![incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/3.incoming-fileds-target.jpeg)
 
 Let's create a table to store the column aggregated results in the BigQuery dataset we're using. Also, perform the connection settings in this section.
 
-![table](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/sett-table.png)
+![table](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/3.target-object.jpeg)
 
-![connection](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/sett-connection.png)
+![connection](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/3.target.jpeg)
 
 We can ensure that the columns used are correct by reviewing the Target Fields and Field Mapping.
 
-![target](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-fields-mapping.png)
+![target](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/3.fields-target.jpeg)
 
-![target fields](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/fields-mapping.png)
+![mapp fields](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/3.mapping-target.jpeg)
 
 Lastly, perform validation before running. The results of the run will appear under My Jobs.
 
-![validate](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/validating.png)
+![validate](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/4.save-validate-run.jpeg)
 
-![my job](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/my-jobs.png)
+![my job](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/4.my-jobs.jpeg)
 
 ## The Aggregation Results in BigQuery
-![result](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/data-at-BigQuery.png)
+![result 1](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/4.big-query.jpeg)
+
+![result 2](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/4.big-query-2.jpeg)
+
+### Summary Result Table
+
+In this case, we perform several aggregations and transformations. For transformations, we convert the data type of the 'Date' column from string to date. Then, for aggregations, several models are applied. Initially, a group by operation is performed on the columns City, Gender, Quantity, Branch, GrossIncome, and ProductList. Here are the aggregations performed:
+
+1. Calculate the count for the Quantity column with a filter for female consumers.
+2. Display the maximum value of the Quantity column with a filter for data only in the city of Yangon.
+3. Calculate the average of the 'GrossIncome' column with a filter for data only in branch A.
+4. Calculate the sum of the ProductLine column for values where Quantity is less than 5.
+5. Display the maximum value of the UnitPrice column, but only for data related to food and beverage.
+
+In the MaxPriceProdutLine column, the values in the result table are null because there are no data values for food and beverage in the group-by data.
+
+

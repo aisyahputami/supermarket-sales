@@ -213,9 +213,9 @@ Next, create fields for the aggregated results. We will try aggregating using th
 ### Target
 In the Target, select the source columns to be aggregated and the columns for the aggregated results in the incoming field section.
 
-![sett incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-incoming-field.png)
-
 ![incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-sett-incoming-field.png)
+
+![sett incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-incoming-field.png)
 
 Let's create a table to store the column aggregated results in the BigQuery dataset we're using. Also, perform the connection settings in this section.
 

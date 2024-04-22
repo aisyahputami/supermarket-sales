@@ -200,38 +200,38 @@ In the Source, configure the connection that was previously created. Ensure that
 ![field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/source-field.png)
 
 ### Agregator
-In the Aggregator, specify which columns to aggregate in the Group By section. In this case, aggregation will be performed on the Quantity and GrossIncome columns.
+In the Aggregator, specify which columns to aggregate in the Group By section. In this case, aggregation will be performed on the City and Gender columns.
 
-![group](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/agregator-group-by.png)
+![group](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/group-by.png)
 
-Next, create fields for the aggregated results. We will try aggregating using the SUM expression on the Quantity and GrossIncome columns. Also, specify the data type with its precision and scale specifications. Using precision 15 and scale 5, it means that we can store numbers with a total of 15 digits, where 5 of them can be used for decimal places.
+Next, create fields for the aggregated results. We will try aggregating using the SUM expression on the City and Gender columns. Also, specify the data type with its precision and scale specifications. Using precision 15 and scale 5, it means that we can store numbers with a total of 15 digits, where 5 of them can be used for decimal places.
 
-![setting](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/setting-agregate.png)
+![setting](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/sett-agregate.png)
 
-![agregate](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/agregate.png)
+![agregate](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/list-agregate.png)
 
 ### Target
 In the Target, select the source columns to be aggregated and the columns for the aggregated results in the incoming field section.
 
-![incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-sett-incoming-field.png)
+![incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-sett-field.png)
 
-![sett incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-incoming-field.png)
+![sett incoming field](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-field.png)
 
 Let's create a table to store the column aggregated results in the BigQuery dataset we're using. Also, perform the connection settings in this section.
 
-![table](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/setting-table.png)
+![table](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/sett-table.png)
 
-![connection](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/setting-connection.png)
+![connection](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/sett-connection.png)
 
 We can ensure that the columns used are correct by reviewing the Target Fields and Field Mapping.
 
-![target](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target.png)
+![target](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-fields-mapping.png)
 
-![target fields](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/target-fields.png)
+![target fields](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/fields-mapping.png)
 
 Lastly, perform validation before running. The results of the run will appear under My Jobs.
 
-![validate](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/validate.png)
+![validate](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/validating.png)
 
 ![my job](https://github.com/aisyahputami/supermarket-sales/blob/main/informatica/my-jobs.png)
 
